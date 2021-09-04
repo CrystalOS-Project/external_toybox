@@ -152,6 +152,10 @@ cc_defaults {
     // This doesn't actually prevent us from dragging in libc++ at runtime
     // because libnetd_client.so is C++.
     stl: "none",
+    shared_libs: [
+        "libcrypto",
+        "libz",
+    ],
 
     target: {
         linux_glibc: {
